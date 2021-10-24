@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@media(max-width: 767px){}
+
+html {
+/*	font-family:'monospace','Lucida Console';*/
+	text-align: center;
+}
+
+html *{
+	box-sizing: border-box;
+}
+
+
+/*header*/
+h1{
+		color: #3f5170;
+		font-size: 28px;
+		border-bottom: 3px dotted #3f5170;
+		height: 100%;
+		margin-top: 0;
+	}
+
+
+/*body*/
+
+	body{
+		/*max-width: 960px;*/
+		user-select:none;
+		-webkit-user-select:none;
+		-ms-user-select: none;
+		-moz-user-select:none;
+		-khtml-user-select:none;
+		-webkit-user-drag:none;
+		-khtml-user-drag:none;
+	}	
+
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	.ro{
+		text-decoration: none;
+		text-underline-position: none;
+		color: #3f5170
+	}
+
+	.gaibu{
+		text-decoration: none;
+		text-underline-position: none;
+		color: #fff
+		
+	}
+
+	.shutu{
+		text-decoration: none;
+		text-underline-position: none;
+		color: #fff;
+	}
+
+
+	.saigo{
+		font-size: 100%;
+		color: blue;
+		margin-top: 100px;
+	}
+
+	
+
+	.qimg {
+		text-align: center;
+	}
+
+	.atext{
+		flex: 1 1 auto;
+	}
+
+	input[name="atext"]{
+		width: 30em;
+	}
+
+	input[name="submit"]{
+		margin-top: 10px;
+	}
+
+
+	.owari{
+		margin: 0;
+		padding: 20px 10px 15px 20px;
+		background-image: url(../images/menu-bg.png);
+		background-repeat: repeat-x;
+		text-align: left;
+		font-size: 10px;
+	}
+
+	
+	.hintlist{
+		text-align: left;
+		font-size: 0.7em;
+	}
+
+	.hintlist li{
+		display: inline;
+		list-style-type: none;
+		margin: 0 30px;
+		border: 1px dotted #a9a9a9;
+	}
+
+
+

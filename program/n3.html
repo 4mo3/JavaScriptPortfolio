@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=bevice-width,initial-scale=1">
+	<title>試練３</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style>
+	 body{
+	background-color:#e6e6fa;
+    }
+	</style>
+	
+
+	<script type="text/javascript">
+		function passCheck(){
+			pass=document.getElementById("answer").value;
+
+			if(pass!="オセロ"){	
+			alert("もう一度お考え下さい。");
+				return false;
+			}else{
+				location.href="pass3_5.html";
+				console.log("hello")
+			}
+		}
+	</script>
+	
+
+</head>
+
+<body>
+	<header>
+	<h1>審判の扉の入<a href="pass3_4.html" class="ro">ロ</a></h1>
+	</header>
+
+	<div class="setbun">
+		<p>試練３です。<br>
+		この謎を解けば、審判の扉に入ることができます。<br>
+		<b>最後の審判</b>まであと少しです。
+		</p>
+	</div>
+
+		<img class="qimg" src="images/osero.jpg" alt="３問目" style="margin-bottom: 10px;" width="600px">
+
+	<div>
+		<label>入力する場合はカタカナで解答してください。<br>
+			<input type="text" id="answer" value="">
+		</label>
+	</div>
+
+<form>
+	<div>
+		<input type="submit" name="submit" value="解答する" onclick="passCheck();return false">
+	</div>
+</form>
+<a style="font-size: 12px" href="n2.html">&lt;&lt;前のページに戻る</a>
+<br>
+
+		<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\nwriteは書く、stabは刺す、pushは押すという意味を持つ言葉です。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\nwriteのイラストは、ラを書く様子を表しており、「カケラ（書けラ）」と変換されています。\nstabのイラストは、ツを刺す様子を表しており、「サセツ（刺せツ）」と変換されています。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\npushのイラストは、何を押す様子なのか考えてみましょう。\n指示は「オセ？」という言葉になります。")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+</body>
+
+</html>

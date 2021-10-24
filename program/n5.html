@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=bevice-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<title>
+		試練５
+	</title>
+	
+	<style>
+	body{background-color:#e6e6fa;}
+		img{width: 500px; margin-bottom: 10px;}
+	</style>
+
+
+<script type="text/javascript">
+		function passCheck(){
+			pass=document.getElementById("answer").value;
+
+			if(pass!="トウタツ"){	
+			alert("もう一度お考え下さい。");
+				return false;
+			}else{
+				location.href="pass5_kaitou.html";
+				console.log("hello")
+			}
+		}
+	</script>
+
+
+</head>
+
+
+
+<body>
+	<header><h1>審判への階段</h1></header>
+
+	<div class="setbun">
+		<p>試練５です。<br>
+		この謎を解けば、次はいよいよ審判です。</p>
+		</div>
+	<h3>１〜４に当てはまる文字は？</h3>
+
+	<img src="images/one.png" id="photo">
+		<script type="text/javascript">
+		let img=[
+		"images/one.png","images/two.png","images/thr.png","images/for.png",
+		"images/fiv.png","images/six.png","images/sev.png","images/eig.png",
+		"images/nin.png","images/ten.png","images/twe.png",];
+
+		let x=0;
+
+		function countUp(){
+			x++;
+		console.log("hello");
+		if(x==img.length){
+			x=0;
+		}
+		document.getElementById("photo").src=img[x];
+		setTimeout("countUp()",800)		
+	}
+	countUp();
+		</script>
+
+		<div>
+		<label>答えをカタカナで入力し解答してください。<br>
+			<input type="text" id="answer" placeholder="カタカナで入力" value="">
+		</label>
+	</div>
+
+<form>
+	<div>
+		<input type="submit" name="submit" value="解答する" onclick="passCheck();return false">
+	</div>
+</form>
+<a style="font-size: 12px" href="n3.html">&lt;&lt;前のページに戻る</a>
+<br>
+
+		<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\n全部で２１文字の、“ある文字列”が２文字ずつ順番にループして表示されています。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\nスタートは「ネウ」、最後は「ヌイ」です。\nこれらの文字を全部つなげたものは、空想上の生き物１体を含む１２体の動物を表します。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\nこれらは十二支です。\n「ね、うし、とら、う、たつ、み、うま、ひつじ、さる、とり、いぬ、い」の１２体います。\nよく見てみましょう。")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+</body>
+
+</html>

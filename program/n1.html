@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>試練１</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style>
+		 body{
+			background-color:#e6e6fa;
+		    }
+	</style>
+
+	<script type="text/javascript">
+		function passCheck(){
+			pass=document.getElementById("answer").value;
+
+			if(pass!="タライ"){	
+			alert("もう一度お考え下さい。");
+				return false;
+			}else{
+				location.href="pass1_2.html";
+				console.log("hello")
+			}
+		}
+	</script>
+
+	
+
+</head>
+
+<body>
+	<header><h1>力試し</h1></header>
+	<div class="setbun">
+		<p>最初の試練はあなたの力を試します。<br>
+		この謎を解いてください。</p></div>
+
+		<img class="qimg" src="images/q1.jpg" alt="１問目" style="margin-bottom: 10px;" width="600px">
+
+		<div>
+		<label>答えをカタカナで入力し解答してください。<br>
+			<input type="text" id="answer" placeholder="カタカナで入力" value="">
+		</label>
+	</div>
+
+<form>
+	<div>
+		<input type="submit" name="submit" value="解答する" onclick="passCheck();return false">
+	</div>
+</form>
+
+<br>
+
+	<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\n左の絵は、ピアノのド～シを表しています。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\n右の絵では、サルがサドルに、ツキがツミキに、アカがアシカに変わっています。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\nサルはピアノのドの鍵盤にあり、「サドル」に変換されています。\n同様に考えると、タイはピアノのラの鍵盤にあるため、どんな言葉に変わりますか？")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+
+</body>
+
+</html>

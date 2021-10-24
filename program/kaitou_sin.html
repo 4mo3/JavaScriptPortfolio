@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=bevice-width, initial-scale=1">
+	<title>
+		最終試練
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style>
+		 body{
+	background-color:#e6e6fa;
+    }
+	</style>
+	
+<script type="text/javascript">
+		function check(){
+			kaitou=document.form1.atext.value;
+
+			if(kaitou==''){
+				alert("解答を入力してください")
+				return false;
+			}else if(kaitou!='アート'){
+				hoge=confirm("本当にこの答えでよろしいですか");
+				if(hoge){
+				location.href="huseikai.html";
+			}
+		}
+
+			if(kaitou=='アート'){
+				hoge=confirm("本当にこの答えでよろしいですか");
+				if(hoge){
+				location.href="seikai_sin.html"
+			}
+		}
+	}
+	</script>
+
+</head>
+
+
+
+<body>
+	<header><h1>審判の扉</h1></header>
+
+	<div class="setbun">
+		<p>最終試練です。<br>
+		よく考えて解答してください。</p>
+	</div>
+
+		<img class="qimg" src="images/q_bou.jpg" alt="最終問題" style="margin-bottom: 10px;" width="600px"></div>
+
+
+	<form name="form1" onSubmit="check();return false;">
+		
+		<div class="kaitoumidasi">最終解答の解答権は<b>１度だけ</b>です。<br><span style="color: red;">「ひらがな」は不正解になります。</span></div>
+
+		<div style="color: #ffc002;">
+			<input type="text" id="answer" name="atext" placeholder="カタカナで入力" value="">
+	</div>
+
+		<input type="submit" id="finatext" value="解答する" style="margin-top: 10px;">
+	</form>
+
+
+
+
+
+
+
+<a style="font-size: 12px" href="n5_sin.html">&lt;&lt;前のページに戻る</a>
+<br>
+
+
+<!-- ヒント -->
+	<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\n問題上部にある３色の円は、リンゴ・カリフラワー・ブドウの絵の色と同じです。\nまた、問題下部にある「あたま・おしり」は何を示しているのか、あわせて考えてみましょう。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\n問題上部にある横向きの矢印は、“３色を緑色に変化させる”という意味を表しています。\nまた、「あたま」は頭文字、「おしり」は語尾を示しています。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\n３色が緑に変化すると、食材のイラストがアオリンゴ、ブロッコリー、マスカットに変わります。\nでは、それぞれの「頭文字、語尾、語尾」を読んでみましょう。")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+</body>
+</html>

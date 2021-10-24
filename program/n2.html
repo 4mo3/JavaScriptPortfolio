@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=bevice-width, initial-scale=1">
+	<title>試練２</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style>
+		 body{
+			background-color:#e6e6fa;
+		    }
+	</style>
+
+	<script type="text/javascript">
+		function passCheck(){
+			pass=document.getElementById("answer").value;
+
+			if(pass!="ケーキ"){	
+			alert("もう一度お考え下さい。");
+				return false;
+			}else{
+				location.href="pass2_3.html";
+				console.log("hello")
+			}
+		}
+	</script>
+
+	
+
+</head>
+
+<body>
+	<header><h1>試練２</h1></header>
+	<div class="setbun">
+		<p>謎を解く力はあるようですね。<br>
+		残る試練はあと<b>５つ</b>です。頑張ってください。</p></div>
+
+		<img class="qimg" src="images/q2.jpg" alt="２問目" style="margin-bottom: 10px;" width="600px">
+
+	<div>
+		<label>答えをカタカナで入力し解答してください。<br>
+			<input type="text" id="answer" placeholder="カタカナで入力" value="">
+		</label>
+	</div>
+
+<form>
+	<div>
+		<input type="submit" name="submit" value="解答する" onclick="passCheck();return false">
+	</div>
+</form>
+
+<a style="font-size: 12px" href="n1.html">&lt;&lt;前のページに戻る</a>
+<br>
+
+	<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\nイコールの右側にある絵は、ピザが半分になっている絵は「ハーフ」、トンカツの絵は矢印の先の「ソース」を表しています。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\nこの問題の法則は、矢印が「ー」を表しており、矢印の先にある文字が「３文字目」となります。\n言い換えれば、「ハ」から出た矢印の先に「フ」、「ソ」から出た矢印の先に「ス」があるということです。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\n左側の図では、「ハ」から下方向に（矢印１つ分）進むと「フ」があるようです。\n真ん中の図では、「ソ」から上方向に（矢印１つ分）上がると「ス」があるようです。\nこの順番は何の順番なのか考えてみましょう。")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+
+</body>
+
+</html>

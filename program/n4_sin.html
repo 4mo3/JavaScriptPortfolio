@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=bevice-width, initial-scale=1">
+	<title>試練４</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style>
+	 body{
+	background-color:#e6e6fa;
+    }
+	</style>
+
+	<script type="text/javascript">
+		function passCheck(){
+			pass=document.getElementById("answer").value;
+
+			if(pass!="クロワッサン"){	
+			alert("もう一度お考え下さい。");
+				return false;
+			}else{
+				location.href="pass4_5.html";
+				console.log("hello")
+			}
+		}
+	</script>
+
+
+</head>
+
+<body>
+	<header><h1>隠し通路</h1></header>
+
+	<div class="setbun">
+		<p>よくここがわかりましたね。素晴らしい<br>
+		<b>試練４</b>はここにあります。内緒ですよ。<br>
+	</div>
+
+	<img class="qimg" src="images/q4.jpg" alt="４問目" style="margin-bottom: 10px;" width="600px">
+
+	<div>
+		<label>答えをカタカナで入力し解答してください。<br>
+			<input type="text" id="answer" placeholder="カタカナで入力" value="">
+		</label>
+	</div>
+
+<form>
+	<div>
+		<input type="submit" name="submit" value="解答する" onclick="passCheck();return false">
+	</div>
+</form>
+<a style="font-size: 12px" href="n3.html">&lt;&lt;前のページに戻る</a>
+<br>
+
+		<h4>▼ヒントを見るときは、下のボタンを押してください。</h4>
+			<input type="button" onclick="hint1()" value="ヒント１">
+			<input type="button" onclick="hint2()" value="ヒント２">
+			<input type="button" onclick="hint3()" value="大ヒント">
+<script>
+	function hint1(){
+		alert("【ヒント１】\n４つのイラストは左から、「食パン・メロンパン・ワッフル・ピザ」です。")
+	}
+
+	function hint2(){
+		alert("【ヒント２】\nそれぞれのイラストの下にある〇には、真上のイラストの名前が入ります。")
+	}
+
+	function hint3(){
+		alert("【大ヒント】\nイラストの下にある〇に、イラストの名前を当てはめて番号の場所の文字を番号順に読んでみましょう。\n【注意】濁点が〇の外にあるものは、濁点を省いた〇の部分のみを読みます。")
+	}
+
+</script>
+
+<footer class="owari" style="margin-top: 20px;">
+	<p>&copy;四方屋-yomoya-</p>
+</footer>
+</body>
+
+</html>
